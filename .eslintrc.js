@@ -18,5 +18,9 @@ module.exports = {
     "indent": "off",
       "max-len": "off",
     "eol-last": "off",
+    "spaced-comment": "off",
+    "require-jsdoc": "off",
+    "operator-linebreak": "off",
+    "no-trailing-spaces": "off",
   },
 };
