@@ -22,5 +22,7 @@ module.exports = {
     "require-jsdoc": "off",
     "operator-linebreak": "off",
     "no-trailing-spaces": "off",
+    "arrow-parens": "off",
+    // "no-unused-vars": "off",
   },
 };
