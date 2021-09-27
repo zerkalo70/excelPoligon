@@ -1,7 +1,7 @@
-// Pure function
+/// Pure functions
 export function capitalize(string) {
     if (typeof string !== 'string') {
-        return ' '
+        return ''
     }
     return string.charAt(0).toUpperCase() + string.slice(1)
 }
@@ -50,4 +50,12 @@ export function debounce(fn, wait) {
         clearTimeout(timeout)
         timeout = setTimeout(later, wait)
     }
+}
+
+export function clone(obj) {
+    return JSON.parse(JSON.stringify(obj))
+}
+
+export function preventDefault(event) {
+    event.preventDefault()
 }
