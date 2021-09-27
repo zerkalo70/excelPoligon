@@ -27,7 +27,6 @@ function toCell(state, row) {
             ...defaultStyles,
             ...state.stylesState[id],
         })
-
         return `
       <div 
         class="cell" 
@@ -57,7 +56,7 @@ function toColumn({col, index, width}) {
 }
 
 function createRow(index, content, state = {}) {
-    const resize = index ? '<div class="row-resize" data-resize="row"></div>' : ' '
+    const resize = index ? '<div class="row-resize" data-resize="row"></div>' : ''
     const height = getHeight(state, index)
     return `
     <div 
@@ -102,9 +101,9 @@ export function createTable(rowsCount = 15, state = {}) {
 
     for (let row = 0; row < rowsCount; row++) {
         const cells = new Array(colsCount)
-            .fill(' ')
+            .fill('')
             .map(toCell(state, row))
-            .join(' ')
+            .join('')
 
         rows.push(createRow(row + 1, cells, state.rowState))
     }
